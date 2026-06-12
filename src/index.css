@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* 薄荷色主题 */
+  --mist-primary: #3EB489;
+  --mist-primary-light: #6BC9A8;
+  --mist-primary-dark: #2E8B6F;
+  --mist-primary-bg: #E8F5EE;
+  --mist-accent: #4ECDC4;
+  --mist-warm: #FFEAA7;
+  --mist-danger: #FF6B6B;
+  --mist-warning: #FDCB6E;
+  --mist-success: #00B894;
+  
+  /* 中性色 */
+  --mist-gray-50: #FAFAFA;
+  --mist-gray-100: #F5F5F5;
+  --mist-gray-200: #EEEEEE;
+  --mist-gray-300: #E0E0E0;
+  --mist-gray-400: #BDBDBD;
+  --mist-gray-500: #9E9E9E;
+  --mist-gray-600: #757575;
+  --mist-gray-700: #616161;
+  --mist-gray-800: #424242;
+  --mist-gray-900: #212121;
+  
+  /* 文字 */
+  --mist-text-primary: #1A1A2E;
+  --mist-text-secondary: #4A4A68;
+  --mist-text-tertiary: #8A8AA3;
+  
+  /* 背景 */
+  --mist-bg: #F0F7F4;
+  --mist-card-bg: #FFFFFF;
+  --mist-surface: #FFFFFF;
+  
+  /* 阴影 */
+  --mist-shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --mist-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  --mist-shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --mist-shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+  
+  /* 圆角 */
+  --mist-radius-sm: 6px;
+  --mist-radius: 12px;
+  --mist-radius-md: 16px;
+  --mist-radius-lg: 24px;
+  --mist-radius-xl: 32px;
+  
+  /* 间距 */
+  --mist-space-xs: 4px;
+  --mist-space-sm: 8px;
+  --mist-space: 12px;
+  --mist-space-md: 16px;
+  --mist-space-lg: 20px;
+  --mist-space-xl: 24px;
+  --mist-space-2xl: 32px;
+  
+  /* 字体 */
+  --mist-font: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* 动画 */
+  --mist-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body, #root {
+  height: 100dvh;
+  font-family: var(--mist-font);
+  background: var(--mist-bg);
+  color: var(--mist-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 桌面端居中 */
+@media (min-width: 768px) {
+  html, body {
+    background: linear-gradient(135deg, #E8F5EE 0%, #F0F7F4 50%, #E0F2F1 100%);
+  }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--mist-gray-300);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mist-gray-400);
+}
+
+/* 通用动画 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.mist-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.mist-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* 按钮基础样式 */
+.mist-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--mist-radius);
+  font-family: var(--mist-font);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--mist-transition);
+  background: var(--mist-primary);
+  color: white;
+}
+
+.mist-btn:hover {
+  background: var(--mist-primary-dark);
+  transform: translateY(-1px);
+}
+
+.mist-btn:active {
+  transform: translateY(0);
+}
+
+.mist-btn-secondary {
+  background: var(--mist-gray-100);
+  color: var(--mist-text-secondary);
+}
+
+.mist-btn-secondary:hover {
+  background: var(--mist-gray-200);
+}
+
+.mist-btn-ghost {
+  background: transparent;
+  color: var(--mist-primary);
+}
+
+.mist-btn-ghost:hover {
+  background: var(--mist-primary-bg);
+}
+
+.mist-btn-danger {
+  background: var(--mist-danger);
+}
+
+.mist-btn-danger:hover {
+  background: #E85555;
+}
+
+.mist-btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: var(--mist-radius-sm);
+}
+
+.mist-btn-lg {
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: var(--mist-radius-md);
+}
+
+/* 卡片样式 */
+.mist-card {
+  background: var(--mist-card-bg);
+  border-radius: var(--mist-radius-md);
+  padding: var(--mist-space-lg);
+  box-shadow: var(--mist-shadow);
+  transition: var(--mist-transition);
+}
+
+.mist-card:hover {
+  box-shadow: var(--mist-shadow-md);
+}
+
+/* 输入框样式 */
+.mist-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--mist-gray-200);
+  border-radius: var(--mist-radius);
+  font-family: var(--mist-font);
+  font-size: 14px;
+  background: var(--mist-surface);
+  color: var(--mist-text-primary);
+  transition: var(--mist-transition);
+  outline: none;
+}
+
+.mist-input:focus {
+  border-color: var(--mist-primary);
+  box-shadow: 0 0 0 3px rgba(62, 180, 137, 0.1);
+}
+
+.mist-input::placeholder {
+  color: var(--mist-text-tertiary);
+}
+
+/* 标签样式 */
+.mist-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--mist-primary-bg);
+  color: var(--mist-primary-dark);
+}
+
+.mist-tag-outline {
+  background: transparent;
+  border: 1px solid var(--mist-primary-light);
+}
+
+/* 空状态 */
+.mist-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--mist-text-tertiary);
+}
+
+.mist-empty-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 16px;
+  opacity: 0.4;
+}
+
+/* 加载状态 */
+.mist-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--mist-text-tertiary);
+}
+
+.mist-loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--mist-gray-200);
+  border-top-color: var(--mist-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* 页面容器 */
+.mist-page {
+  min-height: 100%;
+  padding: var(--mist-space-md);
+  padding-bottom: calc(var(--mist-space-md) + 80px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.mist-page-header {
+  margin-bottom: var(--mist-space-lg);
+}
+
+.mist-page-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--mist-text-primary);
+  margin-bottom: 4px;
+}
+
+.mist-page-subtitle {
+  font-size: 14px;
+  color: var(--mist-text-tertiary);
+}
+
+/* 底部安全区 */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* 隐藏类 */
+.hidden {
+  display: none !important;
+}
+
+/* 响应式 */
+@media (min-width: 768px) {
+  .mist-page {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: var(--mist-space-xl);
+    padding-bottom: calc(var(--mist-space-xl) + 80px);
+  }
+}
+
+/* 页面转场动画 */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
