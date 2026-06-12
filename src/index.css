@@ -1,4 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+/* ============================================
+   mist 字体系统
+   基于 Sarasa Gothic（更纱黑体）
+   设计原则：易读、清晰、有层次
+   ============================================ */
+
+/* ---- 字体加载 ---- */
+@font-face {
+  font-family: 'Sarasa';
+  src: url('/fonts/sarasa-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sarasa';
+  src: url('/fonts/sarasa-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sarasa';
+  src: url('/fonts/sarasa-semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sarasa';
+  src: url('/fonts/sarasa-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   /* 薄荷色主题 */
@@ -11,7 +48,7 @@
   --mist-danger: #FF6B6B;
   --mist-warning: #FDCB6E;
   --mist-success: #00B894;
-  
+
   /* 中性色 */
   --mist-gray-50: #FAFAFA;
   --mist-gray-100: #F5F5F5;
@@ -23,30 +60,30 @@
   --mist-gray-700: #616161;
   --mist-gray-800: #424242;
   --mist-gray-900: #212121;
-  
+
   /* 文字 */
   --mist-text-primary: #1A1A2E;
   --mist-text-secondary: #4A4A68;
   --mist-text-tertiary: #8A8AA3;
-  
+
   /* 背景 */
   --mist-bg: #F0F7F4;
   --mist-card-bg: #FFFFFF;
   --mist-surface: #FFFFFF;
-  
+
   /* 阴影 */
   --mist-shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
   --mist-shadow: 0 2px 8px rgba(0,0,0,0.06);
   --mist-shadow-md: 0 4px 16px rgba(0,0,0,0.08);
   --mist-shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
-  
+
   /* 圆角 */
   --mist-radius-sm: 6px;
   --mist-radius: 12px;
   --mist-radius-md: 16px;
   --mist-radius-lg: 24px;
   --mist-radius-xl: 32px;
-  
+
   /* 间距 */
   --mist-space-xs: 4px;
   --mist-space-sm: 8px;
@@ -55,10 +92,38 @@
   --mist-space-lg: 20px;
   --mist-space-xl: 24px;
   --mist-space-2xl: 32px;
-  
-  /* 字体 */
-  --mist-font: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  
+
+  /* ============================================
+     字体系统
+     ============================================ */
+  --mist-font: 'Sarasa', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* 字体层级 —— 基于 1.25 比例尺 */
+  --mist-text-2xs: 11px;
+  --mist-text-xs: 12px;
+  --mist-text-sm: 14px;
+  --mist-text-base: 16px;
+  --mist-text-lg: 18px;
+  --mist-text-xl: 22px;
+  --mist-text-2xl: 28px;
+  --mist-text-3xl: 36px;
+
+  /* 行高 —— 紧凑但舒适 */
+  --mist-leading-tight: 1.3;
+  --mist-leading-normal: 1.6;
+  --mist-leading-relaxed: 1.75;
+
+  /* 字重 */
+  --mist-weight-normal: 400;
+  --mist-weight-medium: 500;
+  --mist-weight-semibold: 600;
+  --mist-weight-bold: 700;
+
+  /* 字间距 —— 中文微宽松 */
+  --mist-tracking-tight: -0.01em;
+  --mist-tracking-normal: 0.02em;
+  --mist-tracking-wide: 0.05em;
+
   /* 动画 */
   --mist-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -73,10 +138,13 @@
 html, body, #root {
   height: 100dvh;
   font-family: var(--mist-font);
+  font-size: var(--mist-text-base);
+  line-height: var(--mist-leading-normal);
   background: var(--mist-bg);
   color: var(--mist-text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* 桌面端居中 */
@@ -104,7 +172,9 @@ html, body, #root {
   background: var(--mist-gray-400);
 }
 
-/* 通用动画 */
+/* ============================================
+   通用动画
+   ============================================ */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
@@ -133,7 +203,9 @@ html, body, #root {
   animation: slideUp 0.3s ease-out;
 }
 
-/* 按钮基础样式 */
+/* ============================================
+   按钮基础样式
+   ============================================ */
 .mist-btn {
   display: inline-flex;
   align-items: center;
@@ -143,8 +215,10 @@ html, body, #root {
   border: none;
   border-radius: var(--mist-radius);
   font-family: var(--mist-font);
-  font-size: 14px;
-  font-weight: 500;
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-medium);
+  line-height: var(--mist-leading-tight);
+  letter-spacing: var(--mist-tracking-normal);
   cursor: pointer;
   transition: var(--mist-transition);
   background: var(--mist-primary);
@@ -188,17 +262,19 @@ html, body, #root {
 
 .mist-btn-sm {
   padding: 6px 12px;
-  font-size: 12px;
+  font-size: var(--mist-text-xs);
   border-radius: var(--mist-radius-sm);
 }
 
 .mist-btn-lg {
   padding: 14px 28px;
-  font-size: 16px;
+  font-size: var(--mist-text-base);
   border-radius: var(--mist-radius-md);
 }
 
-/* 卡片样式 */
+/* ============================================
+   卡片样式
+   ============================================ */
 .mist-card {
   background: var(--mist-card-bg);
   border-radius: var(--mist-radius-md);
@@ -211,14 +287,19 @@ html, body, #root {
   box-shadow: var(--mist-shadow-md);
 }
 
-/* 输入框样式 */
+/* ============================================
+   输入框样式
+   ============================================ */
 .mist-input {
   width: 100%;
   padding: 12px 16px;
   border: 1.5px solid var(--mist-gray-200);
   border-radius: var(--mist-radius);
   font-family: var(--mist-font);
-  font-size: 14px;
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-normal);
+  line-height: var(--mist-leading-normal);
+  letter-spacing: var(--mist-tracking-normal);
   background: var(--mist-surface);
   color: var(--mist-text-primary);
   transition: var(--mist-transition);
@@ -232,16 +313,21 @@ html, body, #root {
 
 .mist-input::placeholder {
   color: var(--mist-text-tertiary);
+  font-weight: var(--mist-weight-normal);
 }
 
-/* 标签样式 */
+/* ============================================
+   标签样式
+   ============================================ */
 .mist-tag {
   display: inline-flex;
   align-items: center;
   padding: 4px 10px;
   border-radius: 20px;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-medium);
+  line-height: var(--mist-leading-tight);
+  letter-spacing: var(--mist-tracking-normal);
   background: var(--mist-primary-bg);
   color: var(--mist-primary-dark);
 }
@@ -251,7 +337,9 @@ html, body, #root {
   border: 1px solid var(--mist-primary-light);
 }
 
-/* 空状态 */
+/* ============================================
+   空状态
+   ============================================ */
 .mist-empty {
   display: flex;
   flex-direction: column;
@@ -269,7 +357,9 @@ html, body, #root {
   opacity: 0.4;
 }
 
-/* 加载状态 */
+/* ============================================
+   加载状态
+   ============================================ */
 .mist-loading {
   display: flex;
   align-items: center;
@@ -287,7 +377,9 @@ html, body, #root {
   animation: spin 0.8s linear infinite;
 }
 
-/* 页面容器 */
+/* ============================================
+   页面容器
+   ============================================ */
 .mist-page {
   min-height: 100%;
   padding: var(--mist-space-md);
@@ -299,29 +391,102 @@ html, body, #root {
   margin-bottom: var(--mist-space-lg);
 }
 
+/* ---- 页面标题层级 ---- */
 .mist-page-title {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: var(--mist-text-2xl);
+  font-weight: var(--mist-weight-bold);
+  line-height: var(--mist-leading-tight);
+  letter-spacing: var(--mist-tracking-tight);
   color: var(--mist-text-primary);
   margin-bottom: 4px;
 }
 
 .mist-page-subtitle {
-  font-size: 14px;
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-normal);
+  line-height: var(--mist-leading-normal);
+  letter-spacing: var(--mist-tracking-normal);
   color: var(--mist-text-tertiary);
 }
 
-/* 底部安全区 */
+/* ---- 内容标题层级 ---- */
+.mist-heading-xl {
+  font-size: var(--mist-text-xl);
+  font-weight: var(--mist-weight-semibold);
+  line-height: var(--mist-leading-tight);
+  letter-spacing: var(--mist-tracking-tight);
+}
+
+.mist-heading-lg {
+  font-size: var(--mist-text-lg);
+  font-weight: var(--mist-weight-semibold);
+  line-height: var(--mist-leading-tight);
+  letter-spacing: var(--mist-tracking-tight);
+}
+
+.mist-heading {
+  font-size: var(--mist-text-base);
+  font-weight: var(--mist-weight-semibold);
+  line-height: var(--mist-leading-tight);
+  letter-spacing: var(--mist-tracking-normal);
+}
+
+.mist-heading-sm {
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-medium);
+  line-height: var(--mist-leading-tight);
+  letter-spacing: var(--mist-tracking-normal);
+}
+
+/* ---- 正文层级 ---- */
+.mist-body {
+  font-size: var(--mist-text-base);
+  font-weight: var(--mist-weight-normal);
+  line-height: var(--mist-leading-relaxed);
+  letter-spacing: var(--mist-tracking-normal);
+}
+
+.mist-body-sm {
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-normal);
+  line-height: var(--mist-leading-normal);
+  letter-spacing: var(--mist-tracking-normal);
+}
+
+.mist-caption {
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
+  line-height: var(--mist-leading-normal);
+  letter-spacing: var(--mist-tracking-wide);
+  color: var(--mist-text-tertiary);
+}
+
+.mist-label {
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-medium);
+  line-height: var(--mist-leading-tight);
+  letter-spacing: var(--mist-tracking-wide);
+  text-transform: uppercase;
+  color: var(--mist-text-tertiary);
+}
+
+/* ============================================
+   底部安全区
+   ============================================ */
 .safe-bottom {
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
-/* 隐藏类 */
+/* ============================================
+   隐藏类
+   ============================================ */
 .hidden {
   display: none !important;
 }
 
-/* 响应式 */
+/* ============================================
+   响应式
+   ============================================ */
 @media (min-width: 768px) {
   .mist-page {
     max-width: 480px;
@@ -331,7 +496,9 @@ html, body, #root {
   }
 }
 
-/* 页面转场动画 */
+/* ============================================
+   页面转场动画
+   ============================================ */
 .page-enter {
   opacity: 0;
   transform: translateY(20px);

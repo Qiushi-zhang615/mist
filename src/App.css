@@ -65,7 +65,9 @@
   background: none;
   color: var(--mist-text-tertiary);
   font-family: var(--mist-font);
-  font-size: 11px;
+  font-size: var(--mist-text-2xs);
+  font-weight: var(--mist-weight-medium);
+  letter-spacing: var(--mist-tracking-wide);
   cursor: pointer;
   transition: var(--mist-transition);
 }
@@ -97,8 +99,9 @@
   border: 2px dashed var(--mist-primary-light);
   border-radius: var(--mist-radius-lg);
   color: var(--mist-primary);
-  font-size: 14px;
-  font-weight: 500;
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-medium);
+  letter-spacing: var(--mist-tracking-normal);
   cursor: pointer;
   transition: var(--mist-transition);
 }
@@ -196,7 +199,8 @@
 }
 
 .adjustment-item label {
-  font-size: 12px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-medium);
   color: var(--mist-text-secondary);
   width: 48px;
 }
@@ -220,7 +224,8 @@
 }
 
 .adjustment-item span {
-  font-size: 12px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
   color: var(--mist-text-tertiary);
   width: 32px;
   text-align: right;
@@ -277,6 +282,8 @@
 .processing-text h3 {
   margin: 12px 0 4px;
   color: var(--mist-text-primary);
+  font-size: var(--mist-text-lg);
+  font-weight: var(--mist-weight-semibold);
 }
 
 /* 结果卡片 */
@@ -293,8 +300,8 @@
 }
 
 .result-title {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: var(--mist-text-base);
+  font-weight: var(--mist-weight-semibold);
   margin-bottom: 12px;
 }
 
@@ -304,14 +311,15 @@
 
 .result-section label {
   display: block;
-  font-size: 12px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-medium);
   color: var(--mist-text-tertiary);
   margin-bottom: 4px;
 }
 
 .result-section p {
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: var(--mist-text-sm);
+  line-height: var(--mist-leading-normal);
   color: var(--mist-text-secondary);
 }
 
@@ -345,7 +353,8 @@
   border: 1px solid #FED7D7;
   border-radius: var(--mist-radius);
   color: var(--mist-danger);
-  font-size: 14px;
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-medium);
   margin-bottom: 16px;
 }
 
@@ -403,7 +412,8 @@
 
 .filter-group label {
   display: block;
-  font-size: 12px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-medium);
   color: var(--mist-text-tertiary);
   margin-bottom: 8px;
 }
@@ -420,7 +430,8 @@
   border-radius: 20px;
   background: var(--mist-card-bg);
   color: var(--mist-text-secondary);
-  font-size: 13px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-medium);
   cursor: pointer;
   transition: var(--mist-transition);
 }
@@ -436,7 +447,8 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 12px;
-  font-size: 13px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
   color: var(--mist-text-tertiary);
 }
 
@@ -449,7 +461,8 @@
   background: var(--mist-gray-100);
   border-radius: var(--mist-radius-sm);
   color: var(--mist-text-secondary);
-  font-size: 12px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-medium);
   cursor: pointer;
 }
 
@@ -482,16 +495,17 @@
 }
 
 .mistake-title {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-semibold);
   margin-bottom: 6px;
-  line-height: 1.4;
+  line-height: var(--mist-leading-tight);
 }
 
 .mistake-preview {
-  font-size: 13px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
   color: var(--mist-text-tertiary);
-  line-height: 1.5;
+  line-height: var(--mist-leading-normal);
   margin-bottom: 10px;
 }
 
@@ -522,7 +536,8 @@
 }
 
 .mastery-text {
-  font-size: 12px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
   color: var(--mist-text-tertiary);
   white-space: nowrap;
 }
@@ -533,7 +548,7 @@
 
 .difficulty-stars {
   color: var(--mist-warning);
-  font-size: 13px;
+  font-size: var(--mist-text-xs);
   letter-spacing: 1px;
 }
 
@@ -577,10 +592,11 @@
 }
 
 .detail-title {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: var(--mist-text-xl);
+  font-weight: var(--mist-weight-bold);
   margin-bottom: 16px;
-  line-height: 1.4;
+  line-height: var(--mist-leading-tight);
+  letter-spacing: var(--mist-tracking-tight);
 }
 
 .detail-image {
@@ -599,15 +615,16 @@
 }
 
 .detail-section h3 {
-  font-size: 14px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-medium);
   color: var(--mist-text-tertiary);
   margin-bottom: 8px;
-  font-weight: 500;
+  letter-spacing: var(--mist-tracking-wide);
 }
 
 .detail-html {
-  font-size: 14px;
-  line-height: 1.8;
+  font-size: var(--mist-text-sm);
+  line-height: var(--mist-leading-relaxed);
   color: var(--mist-text-secondary);
 }
 
@@ -658,7 +675,9 @@
   background: var(--mist-card-bg);
   color: var(--mist-text-secondary);
   font-family: var(--mist-font);
-  font-size: 14px;
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-medium);
+  letter-spacing: var(--mist-tracking-normal);
   cursor: pointer;
   transition: var(--mist-transition);
 }
@@ -688,13 +707,14 @@
 }
 
 .stat-item label {
-  font-size: 12px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
   color: var(--mist-text-tertiary);
 }
 
 .stat-item span:last-child {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-semibold);
   color: var(--mist-text-primary);
 }
 
@@ -707,7 +727,8 @@
 }
 
 .review-prompt {
-  font-size: 14px;
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-medium);
   color: var(--mist-text-secondary);
   margin-bottom: 12px;
 }
@@ -740,13 +761,14 @@
 }
 
 .review-stat-card .stat-value {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: var(--mist-text-3xl);
+  font-weight: var(--mist-weight-bold);
   color: var(--mist-text-primary);
 }
 
 .review-stat-card .stat-label {
-  font-size: 13px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
   color: var(--mist-text-tertiary);
 }
 
@@ -758,8 +780,8 @@
 }
 
 .review-section h3 {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: var(--mist-text-base);
+  font-weight: var(--mist-weight-semibold);
 }
 
 .review-list {
@@ -782,8 +804,8 @@
 }
 
 .review-item h4 {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-medium);
 }
 
 .review-item-arrow {
@@ -795,13 +817,15 @@
 }
 
 .mastery-badge {
-  font-size: 11px;
+  font-size: var(--mist-text-2xs);
+  font-weight: var(--mist-weight-normal);
   color: var(--mist-text-tertiary);
 }
 
 .review-more {
   text-align: center;
-  font-size: 13px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
   color: var(--mist-text-tertiary);
   padding: 8px;
 }
@@ -830,7 +854,8 @@
 }
 
 .progress-text {
-  font-size: 13px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
   color: var(--mist-text-tertiary);
   white-space: nowrap;
 }
@@ -842,8 +867,8 @@
 }
 
 .review-card .review-title {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: var(--mist-text-base);
+  font-weight: var(--mist-weight-semibold);
   margin-bottom: 12px;
 }
 
@@ -889,9 +914,11 @@
 
 .review-answer h4,
 .review-analysis h4 {
-  font-size: 13px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-medium);
   margin-bottom: 8px;
   color: var(--mist-text-tertiary);
+  letter-spacing: var(--mist-tracking-wide);
 }
 
 /* 复习完成 */
@@ -911,10 +938,14 @@
 }
 
 .done-content h2 {
+  font-size: var(--mist-text-xl);
+  font-weight: var(--mist-weight-bold);
   margin-bottom: 8px;
 }
 
 .done-content p {
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-normal);
   color: var(--mist-text-tertiary);
   margin-bottom: 24px;
 }
@@ -936,13 +967,14 @@
 }
 
 .stat-card .stat-number {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: var(--mist-text-2xl);
+  font-weight: var(--mist-weight-bold);
   color: var(--mist-text-primary);
 }
 
 .stat-card .stat-label {
-  font-size: 12px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
   color: var(--mist-text-tertiary);
 }
 
@@ -951,8 +983,8 @@
 }
 
 .stats-section h3 {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: var(--mist-text-base);
+  font-weight: var(--mist-weight-semibold);
   margin-bottom: 12px;
 }
 
@@ -973,7 +1005,8 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 6px;
-  font-size: 14px;
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-medium);
 }
 
 .stat-bar {
@@ -992,7 +1025,8 @@
 }
 
 .stat-bar-mastery {
-  font-size: 12px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
   color: var(--mist-text-tertiary);
 }
 
@@ -1010,7 +1044,8 @@
 
 .difficulty-label {
   width: 60px;
-  font-size: 13px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-medium);
   color: var(--mist-warning);
 }
 
@@ -1032,7 +1067,8 @@
 .difficulty-count {
   width: 32px;
   text-align: right;
-  font-size: 13px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-medium);
   color: var(--mist-text-secondary);
 }
 
@@ -1050,7 +1086,8 @@
 
 .activity-date {
   width: 80px;
-  font-size: 13px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
   color: var(--mist-text-tertiary);
 }
 
@@ -1073,7 +1110,8 @@
 .activity-count {
   width: 48px;
   text-align: right;
-  font-size: 13px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-medium);
   color: var(--mist-text-secondary);
 }
 
@@ -1083,11 +1121,12 @@
 }
 
 .settings-section h3 {
-  font-size: 14px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-medium);
   color: var(--mist-text-tertiary);
   margin-bottom: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: var(--mist-tracking-wide);
 }
 
 .settings-card {
@@ -1119,14 +1158,15 @@
 
 .settings-label {
   display: block;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-medium);
   margin-bottom: 2px;
 }
 
 .settings-value {
   display: block;
-  font-size: 12px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
   color: var(--mist-text-tertiary);
 }
 
@@ -1140,8 +1180,8 @@
 
 .form-group label {
   display: block;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-medium);
   margin-bottom: 6px;
   color: var(--mist-text-secondary);
 }
@@ -1165,7 +1205,8 @@
   padding: 12px 16px;
   border-radius: var(--mist-radius);
   margin-bottom: 16px;
-  font-size: 14px;
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-medium);
   animation: fadeIn 0.3s ease-out;
 }
 
@@ -1189,7 +1230,8 @@
   text-align: center;
   padding: 24px;
   color: var(--mist-text-tertiary);
-  font-size: 12px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
 }
 
 .settings-footer p {
@@ -1214,16 +1256,17 @@
 }
 
 .usage-item h4 {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-semibold);
   color: var(--mist-text-primary);
   margin-bottom: 6px;
 }
 
 .usage-item p {
-  font-size: 13px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
   color: var(--mist-text-tertiary);
-  line-height: 1.6;
+  line-height: var(--mist-leading-normal);
 }
 
 /* 知识点管理 */
@@ -1249,7 +1292,8 @@
   background: var(--mist-card-bg);
   color: var(--mist-text-secondary);
   font-family: var(--mist-font);
-  font-size: 14px;
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-medium);
   cursor: pointer;
   transition: var(--mist-transition);
   white-space: nowrap;
@@ -1281,7 +1325,8 @@
 
 .knowledge-item span {
   flex: 1;
-  font-size: 14px;
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-normal);
 }
 
 .knowledge-item .icon-btn {
@@ -1307,15 +1352,17 @@
 }
 
 .knowledge-template h4 {
-  font-size: 13px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-medium);
   color: var(--mist-text-tertiary);
   margin-bottom: 8px;
 }
 
 .code-block {
   font-family: 'SF Mono', 'Fira Code', monospace;
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
+  line-height: var(--mist-leading-normal);
   color: var(--mist-text-secondary);
   overflow-x: auto;
   white-space: pre-wrap;
@@ -1329,14 +1376,15 @@
 }
 
 .review-info h4 {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: var(--mist-text-base);
+  font-weight: var(--mist-weight-semibold);
   margin-bottom: 8px;
   color: var(--mist-text-primary);
 }
 
 .review-info > p {
-  font-size: 13px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
   color: var(--mist-text-tertiary);
   margin-bottom: 12px;
 }
@@ -1351,7 +1399,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 13px;
+  font-size: var(--mist-text-xs);
+  font-weight: var(--mist-weight-normal);
   color: var(--mist-text-secondary);
 }
 
@@ -1369,8 +1418,9 @@
 
 /* LaTeX 内容 */
 .latex-content {
-  font-size: 14px;
-  line-height: 1.8;
+  font-size: var(--mist-text-sm);
+  font-weight: var(--mist-weight-normal);
+  line-height: var(--mist-leading-relaxed);
 }
 
 .latex-content p {
